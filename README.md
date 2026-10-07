@@ -1,4 +1,4 @@
-# MPVDHS —— 多路径并行解码 + 动态幻觉抑制推理系统
+# MPVDHS —— Multi-Path Parallel Vector-Divergence Hallucination Suppression（多路径并行向量分歧检测幻觉抑制）
 
 基于 HuggingFace transformers 实现的大语言模型推理系统：每次生成被切成若干**步骤**，
 每个步骤从当前 KV 缓存并行分叉出 n 条采样路径，逐 token 监测注意力 / 置信度 / 隐藏状态，
@@ -17,7 +17,7 @@ MPVDHS/
 ├── mpvdhs/
 │   ├── engine.py        # 核心引擎：加载模型、多路径解码、步骤裁决
 │   └── divergence.py    # FastDTW 对齐 + 头/尾余弦相似度（规则8）
-├── models/              # 本地模型（Qwen2.5-0.5B-Instruct）
+├── models/              # 本地模型（如Qwen2.5-0.5B-Instruct）
 ```
 
 ## 安装与运行
